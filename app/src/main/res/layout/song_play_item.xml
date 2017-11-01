@@ -20,24 +20,26 @@
         android:orientation="horizontal"
         android:layout_alignParentBottom="true">
 
-        <ImageButton
+        <Button
             android:id="@+id/pause_song_play_item"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="50dp"
+            android:layout_marginLeft="50dp"
             android:background="@android:color/transparent"
-            android:src="@drawable/pause"
+            android:drawableStart="@drawable/pause"
             android:tint="@color/itemDark" />
 
-        <ImageButton
+        <Button
             android:id="@+id/play_song_play_item"
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_marginBottom="50dp"
+            android:layout_marginRight="50dp"
+            android:drawableEnd="@mipmap/play"
             android:background="@android:color/transparent"
-            android:src="@drawable/play"
             android:tint="@color/itemDark" />
 
     </LinearLayout>

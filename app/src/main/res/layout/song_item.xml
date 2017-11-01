@@ -51,7 +51,8 @@
         android:id="@+id/songPlay_song_item_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableStart="@drawable/play"
+        android:drawableStart="@mipmap/play"
+        android:background="@android:color/transparent"
         android:text="PLAY"
         android:layout_alignParentRight="true"/>
 

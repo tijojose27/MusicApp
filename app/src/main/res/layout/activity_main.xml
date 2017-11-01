@@ -25,9 +25,7 @@
             android:background="@color/colorPrimaryDark"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:id="@+id/main_Album_view"
-            android:gravity="center"
             style="@style/MyStyle"
             android:text="@string/albums"/>
 
@@ -36,9 +34,7 @@
             android:id="@+id/main_Artist_View"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             style="@style/MyStyle"
-            android:gravity="center"
             android:text="@string/artist"/>
 
         <Button
@@ -47,8 +43,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/MyStyle"
-            android:layout_weight="1"
-            android:gravity="center"
             android:text="@string/songs"/>
 
     </LinearLayout>

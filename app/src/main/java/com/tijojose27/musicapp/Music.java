@@ -14,9 +14,6 @@ public class Music implements Parcelable{
 
     private int imageResource;
 
-
-
-
     public Music(String songName, String artistName, String AlbumName, int imageResource) {
         this.albumName = AlbumName;
         this.artistName = artistName;

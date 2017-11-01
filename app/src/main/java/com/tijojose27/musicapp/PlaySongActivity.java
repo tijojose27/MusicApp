@@ -35,8 +35,8 @@ public class PlaySongActivity extends AppCompatActivity{
         songIV.setImageResource(currMusic.getImageResource());
         songTV.setText(currMusic.getSongName());
 
-        ImageButton playButt = (ImageButton) findViewById(R.id.play_song_play_item);
-        ImageButton pauseButt = (ImageButton) findViewById(R.id.pause_song_play_item);
+        Button playButt = (Button) findViewById(R.id.play_song_play_item);
+        Button pauseButt = (Button) findViewById(R.id.pause_song_play_item);
 
         //CREATING MEDIA PLAYER TO PLAY SONG
         songMedia = MediaPlayer.create(this, R.raw.acousticbreeze);
