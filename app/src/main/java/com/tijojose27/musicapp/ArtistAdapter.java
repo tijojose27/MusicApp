@@ -33,7 +33,7 @@ public class ArtistAdapter extends ArrayAdapter<Music>{
 
         TextView artistTV = (TextView) listView.findViewById(R.id.artist_artist_Text_View);
 
-        artistTV.setText(currMusic.getmArtistName());
+        artistTV.setText(currMusic.getArtistName());
 
 
 

@@ -8,27 +8,27 @@ import android.os.Parcelable;
  */
 
 public class Music implements Parcelable{
-    private String mAlbumName;
-    private String mArtistName;
-    private String mSongName;
+    private String albumName;
+    private String artistName;
+    private String songName;
 
-    private int mImageResource;
-
-
+    private int imageResource;
 
 
-    public Music(String mSongName, String mArtistName, String mAlbumName, int mImageResource) {
-        this.mAlbumName = mAlbumName;
-        this.mArtistName = mArtistName;
-        this.mSongName = mSongName;
-        this.mImageResource = mImageResource;
+
+
+    public Music(String songName, String artistName, String AlbumName, int imageResource) {
+        this.albumName = AlbumName;
+        this.artistName = artistName;
+        this.songName = songName;
+        this.imageResource = imageResource;
     }
 
     protected Music(Parcel in) {
-        mAlbumName = in.readString();
-        mArtistName = in.readString();
-        mSongName = in.readString();
-        mImageResource = in.readInt();
+        albumName = in.readString();
+        artistName = in.readString();
+        songName = in.readString();
+        imageResource = in.readInt();
     }
 
     public static final Creator<Music> CREATOR = new Creator<Music>() {
@@ -43,21 +43,21 @@ public class Music implements Parcelable{
         }
     };
 
-    public String getmAlbumName() {
-        return mAlbumName;
+    public String getAlbumName() {
+        return albumName;
     }
 
-    public int getmImageResource() {
-        return mImageResource;
+    public int getImageResource() {
+        return imageResource;
     }
 
 
-    public String getmArtistName() {
-        return mArtistName;
+    public String getArtistName() {
+        return artistName;
     }
 
-    public String getmSongName() {
-        return mSongName;
+    public String getSongName() {
+        return songName;
     }
 
     @Override
@@ -67,9 +67,9 @@ public class Music implements Parcelable{
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(mSongName);
-        dest.writeString(mAlbumName);
-        dest.writeString(mArtistName);
-        dest.writeInt(mImageResource);
+        dest.writeString(songName);
+        dest.writeString(albumName);
+        dest.writeString(artistName);
+        dest.writeInt(imageResource);
     }
 }

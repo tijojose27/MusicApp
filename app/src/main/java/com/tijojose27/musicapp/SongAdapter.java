@@ -20,6 +20,9 @@ import java.util.ArrayList;
 
 public class SongAdapter extends ArrayAdapter<Music>{
 
+
+    public static final String KEY_SONG = "this_song";
+
     private TextView songTextView;
     private TextView albumTextView;
     private TextView artistTextView;
@@ -46,10 +49,10 @@ public class SongAdapter extends ArrayAdapter<Music>{
         //GETTING THE CURRENT MUSIC OBJECT
         final Music currentMusic = getItem(position);
 
-        songTextView.setText(currentMusic.getmSongName());
-        albumTextView.setText(currentMusic.getmAlbumName());
-        artistTextView.setText(currentMusic.getmArtistName());
-        imageImageView.setImageResource(currentMusic.getmImageResource());
+        songTextView.setText(currentMusic.getSongName());
+        albumTextView.setText(currentMusic.getAlbumName());
+        artistTextView.setText(currentMusic.getArtistName());
+        imageImageView.setImageResource(currentMusic.getImageResource());
 
 
         //CREATING GENERIC CLICK LISTENER AND SENDING THE CURRENT MUSIC OBJECT
@@ -57,7 +60,7 @@ public class SongAdapter extends ArrayAdapter<Music>{
             @Override
             public void onClick(View v) {
                 Intent playSongIntent = new Intent(getContext(), PlaySongActivity.class);
-                playSongIntent.putExtra("this song", currentMusic);
+                playSongIntent.putExtra(KEY_SONG, currentMusic);
                 getContext().startActivity(playSongIntent);
             }
         };

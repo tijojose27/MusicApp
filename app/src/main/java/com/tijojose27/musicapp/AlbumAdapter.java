@@ -36,10 +36,10 @@ public class AlbumAdapter extends ArrayAdapter<Music>{
         TextView artistTextView = (TextView) listView.findViewById(R.id.albumItem_artist_Text_View);
         ImageView imageImageView = (ImageView) listView.findViewById(R.id.albumItem_image_Image_View);
 
-        songTextView.setText(currentMusic.getmSongName());
-        albumTextView.setText(currentMusic.getmAlbumName());
-        artistTextView.setText(currentMusic.getmArtistName());
-        imageImageView.setImageResource(currentMusic.getmImageResource());
+        songTextView.setText(currentMusic.getSongName());
+        albumTextView.setText(currentMusic.getAlbumName());
+        artistTextView.setText(currentMusic.getArtistName());
+        imageImageView.setImageResource(currentMusic.getImageResource());
 
         return listView;
     }

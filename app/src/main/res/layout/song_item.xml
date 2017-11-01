@@ -6,8 +6,9 @@
     android:layout_height="wrap_content">
 
 
-    <ImageView
+    <ImageButton
         android:id="@+id/songItem_image_Image_View"
+        android:background="@color/colorPrimaryDark"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_alignParentTop="true"

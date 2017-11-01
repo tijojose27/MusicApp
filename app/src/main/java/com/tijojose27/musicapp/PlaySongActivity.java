@@ -13,8 +13,11 @@ import android.widget.TextView;
  * Created by tijojose27 on 10/31/2017.
  */
 
+
+
 public class PlaySongActivity extends AppCompatActivity{
 
+    public static final String KEY_SONG = "this_song";
 
     public MediaPlayer songMedia;
 
@@ -26,10 +29,10 @@ public class PlaySongActivity extends AppCompatActivity{
         TextView songTV = (TextView) findViewById(R.id.song_song_play_item);
         ImageView songIV = (ImageView) findViewById(R.id.image_song_play_item);
         //GETTING MUSIC FROM SONG ACTIVITY
-        Music currMusic = getIntent().getParcelableExtra("this song");
+        Music currMusic = getIntent().getParcelableExtra(KEY_SONG);
 
-        songIV.setImageResource(currMusic.getmImageResource());
-        songTV.setText(currMusic.getmSongName());
+        songIV.setImageResource(currMusic.getImageResource());
+        songTV.setText(currMusic.getSongName());
 
         ImageButton playButt = (ImageButton) findViewById(R.id.play_song_play_item);
         ImageButton pauseButt = (ImageButton) findViewById(R.id.pause_song_play_item);
