@@ -25,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
         Button songs = (Button) findViewById(R.id.main_Songs_View);
 
         //CREATING AN ARRAYLIST OF MUSIC
-        musics.add(new Music("Sing along", "Kids", "14 and under", R.drawable.kids));
-        musics.add(new Music("this ballerina", "Ballerina", "Russian ballet", R.drawable.pop));
-        musics.add(new Music("Violin Sad", "Great Violin", "Emptional", R.drawable.violine));
+        musics.add(new Music("Sing along", "Kids", "14 and under", R.mipmap.kids));
+        musics.add(new Music("this ballerina", "Ballerina", "Russian ballet", R.mipmap.pop));
+        musics.add(new Music("Violin Sad", "Great Violin", "Emptional", R.mipmap.violine));
 
         //CREATING A GENERIC ONCLICK LISTENER AND PASSING IN THE APPROPRIATE ONLCICK MEHTOD
         View.OnClickListener myOnClick = new View.OnClickListener() {
