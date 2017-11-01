@@ -17,6 +17,7 @@ public class GenericActivity extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.music_list);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //GETTING THE ARRAYLIST OF MUSIC FROM THE PARENT ACTIVITY
         ArrayList<Music> musics = getIntent().getParcelableArrayListExtra("stuff");
