@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,6 +28,7 @@ public class SongAdapter extends ArrayAdapter<Music>{
     private TextView albumTextView;
     private TextView artistTextView;
     private ImageView imageImageView;
+    private Button playButton;
 
     public SongAdapter(@NonNull Context context, ArrayList<Music> mMusic) {
         super(context, 0, mMusic);
@@ -44,6 +46,7 @@ public class SongAdapter extends ArrayAdapter<Music>{
             albumTextView = (TextView) listItemView.findViewById(R.id.songItem_album_Text_View);
             artistTextView = (TextView) listItemView.findViewById(R.id.songItem_artist_Text_View);
             imageImageView = (ImageView) listItemView.findViewById(R.id.songItem_image_Image_View);
+            playButton = (Button) listItemView.findViewById(R.id.songPlay_song_item_Button);
         }
 
         //GETTING THE CURRENT MUSIC OBJECT
@@ -69,6 +72,7 @@ public class SongAdapter extends ArrayAdapter<Music>{
         albumTextView.setOnClickListener(onClick);
         artistTextView.setOnClickListener(onClick);
         songTextView.setOnClickListener(onClick);
+        playButton.setOnClickListener(onClick);
 
         return listItemView;
     }

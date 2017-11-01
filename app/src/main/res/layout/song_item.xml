@@ -47,4 +47,12 @@
         tools:text="ARTIST"
         android:layout_below="@id/songItem_album_Text_View"/>
 
+    <Button
+        android:id="@+id/songPlay_song_item_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/play"
+        android:text="PLAY"
+        android:layout_alignParentRight="true"/>
+
 </RelativeLayout>
