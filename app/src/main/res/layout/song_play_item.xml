@@ -41,9 +41,15 @@
             android:drawableEnd="@mipmap/play"
             android:background="@android:color/transparent"
             android:tint="@color/itemDark" />
-
     </LinearLayout>
 
+    <Button
+        android:id="@+id/go_back_song_play_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@mipmap/back"
+        android:background="@android:color/transparent"
+        android:text="@string/goBack"/>
 
     <TextView
         android:id="@+id/song_song_play_item"

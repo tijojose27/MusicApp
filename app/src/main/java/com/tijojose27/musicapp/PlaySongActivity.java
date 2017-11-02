@@ -1,8 +1,10 @@
 package com.tijojose27.musicapp;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +24,8 @@ public class PlaySongActivity extends AppCompatActivity{
 
     public MediaPlayer songMedia;
 
+    private Button backButton;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,9 +41,18 @@ public class PlaySongActivity extends AppCompatActivity{
 
         Button playButt = (Button) findViewById(R.id.play_song_play_item);
         Button pauseButt = (Button) findViewById(R.id.pause_song_play_item);
+        backButton = (Button) findViewById(R.id.go_back_song_play_item);
 
         //CREATING MEDIA PLAYER TO PLAY SONG
         songMedia = MediaPlayer.create(this, R.raw.acousticbreeze);
+
+        //GOING BACK ACTIVITY ON BUTTON PRESS
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavUtils.navigateUpFromSameTask(PlaySongActivity.this);
+            }
+        });
 
         //ASSIGNING ONCLICK LISTENER TO PLAY BUTTON
         playButt.setOnClickListener(new View.OnClickListener() {
